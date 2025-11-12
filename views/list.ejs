@@ -1,0 +1,27 @@
+<!-- list.ejs -->
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopData.shopName %> - Books List</title>
+    <link rel="stylesheet" type="text/css" href="/main.css" />
+  </head>
+  <body>
+    <h1>Books Available at <%= shopData.shopName %></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Book Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% availableBooks.forEach(function(book) { %>
+          <tr>
+            <td><%= book.name %></td>
+            <td><%= book.price %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </body>
+</html>
